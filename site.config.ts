@@ -10,8 +10,8 @@ export default siteConfig({
 
   // basic site info (required)
   name: 'WooGame Blog',
-  domain: 'nextjs-notion-starter-kit.transitivebullsh.it',
-  author: 'Leonid Wu',
+  domain: 'wuzheng.xyz',
+  author: 'WuZheng',
 
   // open graph metadata (optional)
   description: 'All about Code and Game',
