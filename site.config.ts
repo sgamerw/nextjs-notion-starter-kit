@@ -58,4 +58,10 @@ export default siteConfig({
       pageId: '3615eb7e0da54aa9a013263ec9159328'
     }
   ]
+
+  // uncomment gisucs config to enable gisucs, get these keys from https://giscus.app/
+  // giscusRepo: '',
+  // giscusRepoId: '',
+  // giscusCategory: '',
+  // giscusCategoryId: ''
 })

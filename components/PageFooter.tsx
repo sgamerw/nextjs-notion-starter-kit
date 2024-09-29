@@ -1,5 +1,6 @@
 import * as React from 'react'
 import Giscus from '@giscus/react';
+import * as config from '@/lib/config'
 
 import styles from './styles.module.css'
 
@@ -9,7 +10,7 @@ export const PageFooter: React.FC<{
   // only display comments and page actions on blog post pages
   if (isBlogPost) {
     return (
-      <div className={styles.comments}>
+      config.giscusRepo && (<div className={styles.comments}>
         <Giscus
           id="comments"
           repo="sgamerw/nextjs-notion-starter-kit"
@@ -24,7 +25,7 @@ export const PageFooter: React.FC<{
           lang="zh-CN"
           loading="lazy"
         />
-      </div>
+      </div>)
     );
   }
 
