@@ -57,11 +57,11 @@ export default siteConfig({
       title: 'About',
       pageId: '3615eb7e0da54aa9a013263ec9159328'
     }
-  ]
+  ],
 
   // uncomment gisucs config to enable gisucs, get these keys from https://giscus.app/
-  // giscusRepo: '',
-  // giscusRepoId: '',
-  // giscusCategory: '',
-  // giscusCategoryId: ''
+  giscusRepo: 'sgamerw/nextjs-notion-starter-kit',
+  giscusRepoId: 'R_kgDOKLTTmw',
+  giscusCategory: 'Announcements',
+  giscusCategoryId: 'DIC_kwDOKLTTm84CY6Ny',
 })

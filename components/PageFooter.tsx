@@ -13,10 +13,10 @@ export const PageFooter: React.FC<{
       config.giscusRepo && (<div className={styles.comments}>
         <Giscus
           id="comments"
-          repo="sgamerw/nextjs-notion-starter-kit"
-          repoId="R_kgDOKLTTmw"
-          category="Announcements"
-          categoryId="DIC_kwDOKLTTm84CY6Ny"
+          repo={config.giscusRepo}
+          repoId={config.giscusRepoId}
+          category={config.giscusCategory}
+          categoryId={config.giscusCategoryId}
           mapping="title"
           reactionsEnabled="1"
           emitMetadata="0"
