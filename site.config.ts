@@ -49,7 +49,7 @@ export default siteConfig({
   pageUrlOverrides: null,
 
   // whether to use the default notion navigation style or a custom one with links to
-  // important pages
+  // important pages. To use `navigationLinks`, set `navigationStyle` to `custom`.
   // navigationStyle: 'default'
   navigationStyle: 'custom',
   navigationLinks: [
@@ -59,9 +59,9 @@ export default siteConfig({
     }
   ],
 
-  // uncomment gisucs config to enable gisucs, get these keys from https://giscus.app/
+  // giscus comments (https://giscus.app/)
   giscusRepo: 'sgamerw/nextjs-notion-starter-kit',
   giscusRepoId: 'R_kgDOKLTTmw',
   giscusCategory: 'Announcements',
-  giscusCategoryId: 'DIC_kwDOKLTTm84CY6Ny',
+  giscusCategoryId: 'DIC_kwDOKLTTm84CY6Ny'
 })

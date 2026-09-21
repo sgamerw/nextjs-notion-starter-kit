@@ -1,33 +1,40 @@
+'use client'
+
+import Giscus from '@giscus/react'
 import * as React from 'react'
-import Giscus from '@giscus/react';
+
 import * as config from '@/lib/config'
 
 import styles from './styles.module.css'
 
-export const PageFooter: React.FC<{
-  isBlogPost: boolean
-}> = ({ isBlogPost }) => {
-  // only display comments and page actions on blog post pages
-  if (isBlogPost) {
-    return (
-      config.giscusRepo && (<div className={styles.comments}>
-        <Giscus
-          id="comments"
-          repo={config.giscusRepo}
-          repoId={config.giscusRepoId}
-          category={config.giscusCategory}
-          categoryId={config.giscusCategoryId}
-          mapping="title"
-          reactionsEnabled="1"
-          emitMetadata="0"
-          inputPosition="bottom"
-          theme="preferred_color_scheme"
-          lang="zh-CN"
-          loading="lazy"
-        />
-      </div>)
-    );
+export function PageFooter({ isBlogPost }: { isBlogPost: boolean }) {
+  // only display comments on blog post pages when giscus is configured
+  if (
+    !isBlogPost ||
+    !config.giscusRepo ||
+    !config.giscusRepoId ||
+    !config.giscusCategory ||
+    !config.giscusCategoryId
+  ) {
+    return null
   }
 
-  return null
+  return (
+    <div className={styles.comments}>
+      <Giscus
+        id='comments'
+        repo={config.giscusRepo}
+        repoId={config.giscusRepoId}
+        category={config.giscusCategory}
+        categoryId={config.giscusCategoryId}
+        mapping='title'
+        reactionsEnabled='1'
+        emitMetadata='0'
+        inputPosition='bottom'
+        theme='preferred_color_scheme'
+        lang='zh-CN'
+        loading='lazy'
+      />
+    </div>
+  )
 }
